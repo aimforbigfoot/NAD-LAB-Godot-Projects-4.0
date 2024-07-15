@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1primdstf67r"]
+
+[ext_resource type="PackedScene" uid="uid://da50b86cn7eog" path="res://src/platform.tscn" id="1_s0psa"]
+[ext_resource type="PackedScene" uid="uid://ctx6vgrgqcw65" path="res://src/player.tscn" id="2_k13v8"]
+
+[node name="world" type="Node3D"]
+
+[node name="platform" parent="." instance=ExtResource("1_s0psa")]
+
+[node name="platform2" parent="." instance=ExtResource("1_s0psa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94816, -7.4976)
+
+[node name="platform3" parent="." instance=ExtResource("1_s0psa")]
+transform = Transform3D(0.985166, -0.171602, 0, 0.171602, 0.985166, 0, 0, 0, 1, 9.69404, -2.71637, 5.12159)
+
+[node name="player" parent="." instance=ExtResource("2_k13v8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.0555, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.176123, 0.984368, 0, -0.984368, -0.176123, 0, 12.7186, 0)
+shadow_enabled = true
