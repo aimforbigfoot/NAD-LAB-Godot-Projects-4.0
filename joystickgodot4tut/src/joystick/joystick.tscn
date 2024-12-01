@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://btd1iv4khl1hu"]
+
+[ext_resource type="Texture2D" uid="uid://x3cqoh0ec5bf" path="res://icon.svg" id="1_ocprb"]
+[ext_resource type="Script" path="res://src/joystick/joystick.gd" id="1_vb3tk"]
+
+[node name="joystick" type="Node2D"]
+script = ExtResource("1_vb3tk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ocprb")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-24, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D"]
+modulate = Color(1, 0.360372, 0.556795, 1)
+scale = Vector2(0.53125, 0.53125)
+texture = ExtResource("1_ocprb")

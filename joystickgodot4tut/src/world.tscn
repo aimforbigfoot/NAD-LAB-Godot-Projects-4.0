@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://beh7of1pxq758"]
+
+[ext_resource type="PackedScene" uid="uid://btd1iv4khl1hu" path="res://src/joystick/joystick.tscn" id="1_c0aem"]
+[ext_resource type="PackedScene" uid="uid://b0p5y76sxs1mr" path="res://src/player/player.tscn" id="2_c7dkt"]
+
+[node name="world" type="Node2D"]
+
+[node name="joystick" parent="." instance=ExtResource("1_c0aem")]
+position = Vector2(544, 515)
+
+[node name="player" parent="." instance=ExtResource("2_c7dkt")]
+position = Vector2(463, 290)
