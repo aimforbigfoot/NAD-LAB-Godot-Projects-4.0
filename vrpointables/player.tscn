@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca5pf8k73160h"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_enjkq"]
+[ext_resource type="Script" path="res://left_controller.gd" id="2_5fjkl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cuq26"]
+
+[node name="player" type="Node3D"]
+script = ExtResource("1_enjkq")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+current = true
+
+[node name="leftController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.550493, 0, -0.661407)
+tracker = &"left_hand"
+script = ExtResource("2_5fjkl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/leftController"]
+transform = Transform3D(0.0781806, 0, 0, 0, 0.0781806, 0, 0, 0, 0.0781806, 0, 0, 0)
+mesh = SubResource("BoxMesh_cuq26")
+
+[node name="RayCast3D" type="RayCast3D" parent="XROrigin3D/leftController"]
+target_position = Vector3(0, 0, -50)
+collide_with_areas = true
+
+[node name="XRController3D2" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.594026, 0, -0.661407)
+tracker = &"right_hand"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/XRController3D2"]
+transform = Transform3D(0.0781806, 0, 0, 0, 0.0781806, 0, 0, 0, 0.0781806, 0, 0, 0)
+mesh = SubResource("BoxMesh_cuq26")

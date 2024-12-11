@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvnsip6jvhphn"]
+
+[ext_resource type="PackedScene" uid="uid://clw3rwd6wptab" path="res://area_button_3d.tscn" id="1_idah5"]
+[ext_resource type="PackedScene" uid="uid://dj7334jxjifxg" path="res://static_body_3d.tscn" id="2_o0hal"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wvfbj"]
+
+[node name="smallerWorld" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.66574, 0, 0, 0, 5.66574, 0, 0, 0, 5.66574, 0, 0, 0)
+mesh = SubResource("PlaneMesh_wvfbj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.66574, 0, 0, 0, -2.47657e-07, -5.66574, 0, 5.66574, -2.47657e-07, 0, 0, -15.094)
+mesh = SubResource("PlaneMesh_wvfbj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.784531, 0.620012, -0.00979853, -0.134276, 0.18529, 0.973467, 0.605377, -0.762399, 0.228618, 0, 2.64012, 0)
+
+[node name="areaButton3D" parent="." instance=ExtResource("1_idah5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.05767, -15.0285)
+
+[node name="areaButton3D2" parent="." instance=ExtResource("1_idah5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49755, 3.05767, -15.0285)
+
+[node name="areaButton3D3" parent="." instance=ExtResource("1_idah5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34605, 3.05767, -15.0285)
+
+[node name="areaButton3D4" parent="." instance=ExtResource("1_idah5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76154, 3.05767, -15.0285)
+
+[node name="areaButton3D5" parent="." instance=ExtResource("1_idah5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.42372, 3.05767, -15.0285)
+
+[node name="staticBody3d" parent="." instance=ExtResource("2_o0hal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.918582, -14.7869)
+
+[node name="staticBody3d2" parent="." instance=ExtResource("2_o0hal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.03064, 0.918582, -14.7869)
+
+[node name="staticBody3d3" parent="." instance=ExtResource("2_o0hal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69746, 0.918582, -14.7869)
+
+[node name="staticBody3d4" parent="." instance=ExtResource("2_o0hal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91676, 0.918582, -14.7869)
+
+[node name="staticBody3d5" parent="." instance=ExtResource("2_o0hal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71831, 0.918582, -14.7869)
