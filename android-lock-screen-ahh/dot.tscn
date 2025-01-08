@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm55gn6ajya05"]
+
+[ext_resource type="Script" path="res://dot.gd" id="1_6a4d8"]
+[ext_resource type="Texture2D" uid="uid://bshgnjh5m2a80" path="res://icon.svg" id="1_63mkj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_andph"]
+radius = 80.0
+
+[node name="dot" type="Area2D"]
+script = ExtResource("1_6a4d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_andph")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_63mkj")

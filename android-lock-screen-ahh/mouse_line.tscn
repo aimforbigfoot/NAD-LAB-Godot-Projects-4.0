@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi1vcf1li0im1"]
+
+[ext_resource type="Script" path="res://mouse_line.gd" id="1_atf2p"]
+
+[node name="mouseLine" type="Node2D"]
+script = ExtResource("1_atf2p")
+
+[node name="Line2D" type="Line2D" parent="."]

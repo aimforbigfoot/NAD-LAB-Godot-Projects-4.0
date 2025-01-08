@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://do5564lore2yh"]
+
+[ext_resource type="PackedScene" uid="uid://bi1vcf1li0im1" path="res://mouse_line.tscn" id="1_swx8o"]
+[ext_resource type="PackedScene" uid="uid://cm0k8qh6yhjcu" path="res://dot_grid_holder.tscn" id="2_lu4bv"]
+
+[node name="world" type="Node2D"]
+
+[node name="DotGridHolder" parent="." instance=ExtResource("2_lu4bv")]
+position = Vector2(167, 130)
+
+[node name="mouseLine" parent="." instance=ExtResource("1_swx8o")]
+
+[editable path="DotGridHolder"]

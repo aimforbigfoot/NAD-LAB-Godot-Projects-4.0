@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm0k8qh6yhjcu"]
+
+[ext_resource type="PackedScene" uid="uid://cm55gn6ajya05" path="res://dot.tscn" id="1_ivqo4"]
+
+[node name="DotGridHolder" type="Node2D"]
+
+[node name="dot" parent="." instance=ExtResource("1_ivqo4")]
+
+[node name="dot2" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(192, 0)
+
+[node name="dot3" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(384, -8)
+
+[node name="dot4" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(0, 192)
+
+[node name="dot10" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(576, 192)
+
+[node name="dot5" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(192, 192)
+
+[node name="dot6" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(384, 192)
+
+[node name="dot7" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(0, 376)
+
+[node name="dot8" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(192, 376)
+
+[node name="dot9" parent="." instance=ExtResource("1_ivqo4")]
+position = Vector2(384, 376)
