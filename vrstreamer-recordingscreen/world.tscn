@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://87jvrv5f081m"]
+
+[ext_resource type="PackedScene" uid="uid://belw5r2nw64lx" path="res://player.tscn" id="1_2i3b5"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6368u"]
+size = Vector2(10, 10)
+
+[node name="world" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.876517, 0.481371, 0, -0.481371, 0.876517, 0, 1.58876, 1.78738)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_6368u")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="player" parent="SubViewport" instance=ExtResource("1_2i3b5")]
