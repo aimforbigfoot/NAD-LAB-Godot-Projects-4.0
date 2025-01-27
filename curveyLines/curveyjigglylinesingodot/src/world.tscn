@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=3 uid="uid://blrx3k8gnct5g"]
+
+[ext_resource type="PackedScene" uid="uid://v4hklvalxea3" path="res://src/draggable.tscn" id="1_0ue41"]
+[ext_resource type="PackedScene" uid="uid://byhcufuyfpfr5" path="res://src/line_brain.tscn" id="2_gwn7m"]
+
+[node name="world" type="Node2D"]
+
+[node name="theBlackHolerOfPoints" type="Node2D" parent="."]
+
+[node name="draggable" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(0, 3)
+
+[node name="draggable2" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(466, 291)
+
+[node name="draggable" parent="theBlackHolerOfPoints/draggable2" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(108, 66)
+
+[node name="draggable3" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(929, 169)
+
+[node name="draggable" parent="theBlackHolerOfPoints/draggable3" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(99, 104)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable3" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(88, -79)
+
+[node name="draggable6" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(229, 548)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable6" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable6" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="draggable7" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(341, 716)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable7" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable7" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="draggable8" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(759, 840)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable8" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable8" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="draggable9" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(1409, 793)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable9" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable9" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="draggable10" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(1505, 563)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable10" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable10" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="draggable11" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(1444, 357)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable11" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable11" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="draggable12" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(1427, 119)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable12" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable12" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="draggable13" parent="theBlackHolerOfPoints" instance=ExtResource("1_0ue41")]
+position = Vector2(849, 499)
+
+[node name="draggable2" parent="theBlackHolerOfPoints/draggable13" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-146, 55)
+
+[node name="draggable3" parent="theBlackHolerOfPoints/draggable13" instance=ExtResource("1_0ue41")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(149, 22)
+
+[node name="lineBrain" parent="." node_paths=PackedStringArray("lineHolderNodeThing") instance=ExtResource("2_gwn7m")]
+lineHolderNodeThing = NodePath("../theBlackHolerOfPoints")

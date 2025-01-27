@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://byhcufuyfpfr5"]
+
+[ext_resource type="Script" path="res://src/line_brain.gd" id="1_j7tuj"]
+
+[sub_resource type="Curve2D" id="Curve2D_cn2kb"]
+_data = {
+"points": PackedVector2Array(214.259, -186.887, -214.259, 186.887, 0, 0, 95.3313, -115.153, -95.3313, 115.153, 210, 107, 0, 0, 0, 0, 921, 140, 0, 0, 0, 0, 653, 461, -277.499, -270.892, 277.499, 270.892, 188, 567)
+}
+point_count = 5
+
+[node name="lineBrain" type="Node2D"]
+script = ExtResource("1_j7tuj")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-1, 0)
+width = 24.0
+joint_mode = 2
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(47, 47)
+curve = SubResource("Curve2D_cn2kb")
