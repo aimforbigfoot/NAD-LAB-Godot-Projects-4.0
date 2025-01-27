@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dljq51ibil5nm"]
+
+[ext_resource type="PackedScene" uid="uid://b4kqm104gg44j" path="res://src/dot/dot.tscn" id="1_jtxic"]
+
+[node name="simpleDotGrid" type="Node2D"]
+
+[node name="Dot" parent="." instance=ExtResource("1_jtxic")]
+
+[node name="Dot2" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(32, 0)
+
+[node name="Dot3" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(64, 0)
+
+[node name="Dot4" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(0, 32)
+
+[node name="Dot5" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(32, 32)
+
+[node name="Dot6" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(64, 32)
+
+[node name="Dot7" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(0, 64)
+
+[node name="Dot8" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(32, 64)
+
+[node name="Dot9" parent="." instance=ExtResource("1_jtxic")]
+position = Vector2(64, 64)

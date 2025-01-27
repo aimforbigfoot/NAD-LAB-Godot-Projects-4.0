@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://txq76x52y28h"]
+
+[ext_resource type="PackedScene" uid="uid://dljq51ibil5nm" path="res://src/dot/simple_dot_grid.tscn" id="1_4imoo"]
+[ext_resource type="PackedScene" uid="uid://b73atona4vein" path="res://src/mouseEffects/mouse_effects.tscn" id="2_i0pxk"]
+
+[node name="World" type="Node2D"]
+
+[node name="simpleDotGrid" parent="." instance=ExtResource("1_4imoo")]
+position = Vector2(16, 32)
+
+[node name="MouseEffects" parent="." instance=ExtResource("2_i0pxk")]

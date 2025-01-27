@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://b73atona4vein"]
+
+[ext_resource type="Script" path="res://src/mouseEffects/mouse_effects.gd" id="1_vfuaj"]
+[ext_resource type="Shader" path="res://src/mouseEffects/mouse_effects.gdshader" id="2_xa3i8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yavfj"]
+shader = ExtResource("2_xa3i8")
+shader_parameter/amplitude = 10.0
+shader_parameter/frequency = 6.591
+
+[sub_resource type="Curve" id="Curve_8kfd5"]
+_data = [Vector2(0, 1), 0.0, 1.15275, 0, 0, Vector2(1, 0.937799), -1.6838, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_tjpif"]
+_data = [Vector2(0, 1), 0.0, 0.0208118, 0, 0, Vector2(1, 0.00139678), 0.127705, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_woewu"]
+curve = SubResource("Curve_tjpif")
+
+[sub_resource type="Curve" id="Curve_0d0kx"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_26qmw"]
+curve = SubResource("Curve_0d0kx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jdcs2"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 720.0
+velocity_pivot = Vector3(1, 1, 0)
+direction = Vector3(1, 1, 0)
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -100.0
+linear_accel_max = -50.0
+scale_max = 5.0
+scale_curve = SubResource("CurveTexture_26qmw")
+scale_over_velocity_max = 680.98
+alpha_curve = SubResource("CurveTexture_woewu")
+
+[sub_resource type="Curve2D" id="Curve2D_xibif"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 88, 32, 0, 0, 0, 0, 360, -64)
+}
+point_count = 3
+
+[node name="MouseEffects" type="Node2D"]
+script = ExtResource("1_vfuaj")
+
+[node name="Line2D" type="Line2D" parent="."]
+material = SubResource("ShaderMaterial_yavfj")
+width = 3.0
+width_curve = SubResource("Curve_8kfd5")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(160, 16)
+emitting = false
+amount = 512
+process_material = SubResource("ParticleProcessMaterial_jdcs2")
+speed_scale = 2.0
+fixed_fps = 240
+interpolate = false
+fract_delta = false
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(0, 16)
+curve = SubResource("Curve2D_xibif")

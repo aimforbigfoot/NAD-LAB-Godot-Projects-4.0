@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4kqm104gg44j"]
+
+[ext_resource type="Script" path="res://src/dot/dot.gd" id="1_ika53"]
+[ext_resource type="Texture2D" uid="uid://daqx45q8qtuvk" path="res://assets/tile_0196.png" id="1_pmex4"]
+[ext_resource type="AudioStream" uid="uid://p6e43x66gxn0" path="res://assets/bloop.wav" id="3_j0ux7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jgmk"]
+
+[node name="Dot" type="Area2D"]
+script = ExtResource("1_ika53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_1jgmk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_pmex4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j0ux7")
