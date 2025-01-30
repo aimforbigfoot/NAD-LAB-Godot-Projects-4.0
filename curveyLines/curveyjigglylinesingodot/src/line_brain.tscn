@@ -13,7 +13,7 @@ script = ExtResource("1_j7tuj")
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(-1, 0)
-width = 24.0
+width = 64.0
 joint_mode = 2
 
 [node name="Path2D" type="Path2D" parent="."]

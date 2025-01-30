@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqx7ouhsobsv3"]
+
+[ext_resource type="Texture2D" uid="uid://unhrsfse65o1" path="res://src/colored-transparent.png" id="1_cg87f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1gbu3"]
+size = Vector3(10, 1, 10)
+
+[node name="world" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("1_cg87f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_1gbu3")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-07, 1.42423, -0.626714)
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08173, 1.42423, -0.626714)
+light_color = Color(0, 1, 1, 1)
+shadow_enabled = true
