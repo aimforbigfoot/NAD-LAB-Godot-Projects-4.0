@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyg6u5ffd07iu"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_l6hac"]
+[ext_resource type="Script" path="res://handScript.gd" id="2_xpsl5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k7bff"]
+
+[node name="player" type="Node3D"]
+script = ExtResource("1_l6hac")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="leftHand" type="XRController3D" parent="XROrigin3D" node_paths=PackedStringArray("labelImModding")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.224948, 0, -0.342486)
+tracker = &"left_hand"
+script = ExtResource("2_xpsl5")
+labelImModding = NodePath("../../Label3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/leftHand"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("BoxMesh_k7bff")
+
+[node name="rightHand" type="XRController3D" parent="XROrigin3D" node_paths=PackedStringArray("labelImModding")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.439483, 0, -0.446006)
+tracker = &"right_hand"
+script = ExtResource("2_xpsl5")
+labelImModding = NodePath("../../Label3D2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/rightHand"]
+transform = Transform3D(0.0286828, -0.0212733, 0.0217457, 0.024961, 0.0335421, -0.000110417, -0.017389, 0.0130579, 0.0357106, 0, 0, 0)
+mesh = SubResource("BoxMesh_k7bff")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79876, 1.13131, -1.62384)
+text = "lol"
+
+[node name="Label3D2" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10393, 1.13131, -1.62384)
+text = "lol"
