@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6yur7ixuflpb"]
+
+[ext_resource type="PackedScene" uid="uid://ckdlohs8scfid" path="res://src/passport.tscn" id="1_tp5op"]
+
+[node name="world" type="Node2D"]
+
+[node name="passport" parent="." instance=ExtResource("1_tp5op")]
+position = Vector2(743, 340)
+
+[node name="passport2" parent="." instance=ExtResource("1_tp5op")]
+position = Vector2(118, 209)

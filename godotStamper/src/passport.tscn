@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckdlohs8scfid"]
+
+[ext_resource type="Texture2D" uid="uid://3jobew8ke3no" path="res://icon.svg" id="1_1odhd"]
+[ext_resource type="Script" uid="uid://cmh6h7r7fx2pk" path="res://src/passport.gd" id="1_gp3m2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gp3m2"]
+size = Vector2(384, 384)
+
+[node name="passport" type="Node2D"]
+script = ExtResource("1_gp3m2")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(3, 3)
+texture = ExtResource("1_1odhd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gp3m2")
