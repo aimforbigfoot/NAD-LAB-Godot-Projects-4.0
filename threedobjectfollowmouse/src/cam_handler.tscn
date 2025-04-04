@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://8t37s7oidpcf"]
+
+[ext_resource type="Script" uid="uid://cnh0ah8anbbj0" path="res://src/cam_handler.gd" id="1_cxr0x"]
+
+[node name="camHandler" type="Node3D"]
+script = ExtResource("1_cxr0x")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.80941, 9.19279)
+current = true

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://csy33mpef0v5v"]
+
+[ext_resource type="Script" uid="uid://bo82htn1i5uph" path="res://src/physics_camhandler.gd" id="1_6u0hi"]
+
+[node name="physicsCamhandler" type="Node3D"]
+script = ExtResource("1_6u0hi")
+
+[node name="Camera3D" type="Camera3D" parent="."]

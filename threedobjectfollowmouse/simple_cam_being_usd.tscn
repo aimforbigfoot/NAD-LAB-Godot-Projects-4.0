@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://j1fed7465r2t"]
+
+[ext_resource type="PackedScene" uid="uid://8t37s7oidpcf" path="res://src/cam_handler.tscn" id="1_fs0bq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fs0bq"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_4p65p"]
+sky_material = SubResource("ProceduralSkyMaterial_fs0bq")
+
+[sub_resource type="Environment" id="Environment_c271a"]
+background_mode = 2
+sky = SubResource("Sky_4p65p")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4p65p"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fs0bq"]
+
+[node name="simpleCamBeingUsd" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.475517, 0.180122, 0.861069, 0.723796, 0.636441, 0.266576, -0.500003, 0.749999, -0.43301, 0, 10.642, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c271a")
+
+[node name="camHandler" parent="." node_paths=PackedStringArray("mi") instance=ExtResource("1_fs0bq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9686, -3.55628)
+mi = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.976133, 0.217172, 0, -0.217172, 0.976133, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_4p65p")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(58.8096, 0, 0, 0, 58.8096, 0, 0, 0, 58.8096, 0, 0, 0)
+mesh = SubResource("PlaneMesh_fs0bq")
