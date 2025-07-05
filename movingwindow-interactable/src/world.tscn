@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://p5pv3vcworqc"]
+
+[ext_resource type="Texture2D" uid="uid://5vynnbcwh1ta" path="res://icon.svg" id="1_tp5op"]
+[ext_resource type="Script" uid="uid://crffquvsgy755" path="res://src/world.gd" id="1_xlegt"]
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_xlegt")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(74, 72)
+texture = ExtResource("1_tp5op")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+modulate = Color(1, 1, 1, 0.658824)
+polygon = PackedVector2Array(46, 89, 38, 181, 124, 177, 113, 90)
